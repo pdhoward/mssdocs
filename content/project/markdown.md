@@ -1,7 +1,7 @@
 ---
 part: Documentation
 title: Markdown Usage
-description: While this is not a complete markdown reference, here are markdown features that you can use right away in your books.
+description: Modernization Pattern
 tags: [markdown, reference, NextBook, md]
 updated: '2021-03-14'
 ---
@@ -9,16 +9,6 @@ updated: '2021-03-14'
 ## Front Matter
 
 YAML front matter can be used to add title, description, part info, tags and update date to your pages. This page includes a front matter like this:
-
-```yaml
----
-part: Documentation
-title: Markdown Usage
-description: While this is not a complete markdown reference, here are markdown features that you can use right away in your books.
-tags: [markdown, reference, NextBook, md]
-updated: '2021-03-14'
----
-```
 
 ## HTML Tags
 

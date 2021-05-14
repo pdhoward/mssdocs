@@ -29,8 +29,12 @@
       "path": "/patterns/overview"
     },
     {
-      "title": "Reference",
-      "path": "/reference/markdown"
+      "title": "Getting Started",
+      "path": "/project/overview"
+    },
+    {
+      "title": "About",
+      "path": "https://www.mssint.com/"
     },
     {
       "title": "Github",
@@ -45,49 +49,65 @@
       "part": "Patterns",
       "chapters": [
         {
-          "title": "NextBook Features",
-          "path": "/nextbook/nextbook-features"
+          "title": "Overview",
+          "path": "/patterns/overview"
         },
         {
-          "title": "Getting Started",
-          "path": "/nextbook/getting-started"
+          "title": "Data Modernization",
+          "path": "/patterns/data-modern"
         },
         {
-          "title": "Settings",
-          "path": "/nextbook/settings"
+          "title": "I-O Performance",
+          "path": "/patterns/i-o-performance"
+        },        
+        {
+          "title": "Code Modernization",
+          "path": "/patterns/code-modernization"
         },
         {
-          "title": "Page Metadata",
-          "path": "/nextbook/page-metadata"
+          "title": "Legacy Migration",
+          "path": "/patterns/legacy-migration"
         },
         {
-          "title": "In Progress Features",
-          "path": "/nextbook/in-progress-features"
+          "title": "Automated Co-Existence",
+          "path": "/patterns/automated-co-existence"
+        },
+        {
+          "title": "Data Migration",
+          "path": "/patterns/data-mapping-migration"
+        },
+        {
+          "title": "Batch Modernization",
+          "path": "/patterns/batch-modernization"
+        },
+        {
+          "title": "Testing at Scale",
+          "path": "/patterns/large-scale-testing"
         }
       ]
     },
     {
       "part": "Project Approach",
       "chapters": [
-        { "title": "Markdown Usage", "path": "/reference/markdown" },
-        { "title": "Fenced Code Usage", "path": "/reference/fencedcode" },
-        { "title": "Using MDX", "path": "/reference/using-mdx" }
+        { "title": "Overview", "path": "/project/overview" }
       ]
     },
     {
       "part": "Business Process",
       "chapters": [
-        { "title": "Markdown Usage", "path": "/reference/markdown" },
-        { "title": "Fenced Code Usage", "path": "/reference/fencedcode" },
-        { "title": "Using MDX", "path": "/reference/using-mdx" }
+        { "title": "Overview", "path": "/business/overview" }
       ]
     },
     {
       "part": "Technical Process",
       "chapters": [
-        { "title": "Markdown Usage", "path": "/reference/markdown" },
-        { "title": "Fenced Code Usage", "path": "/reference/fencedcode" },
-        { "title": "Using MDX", "path": "/reference/using-mdx" }
+        { "title": "Overview", "path": "/technical/overview" },
+        {
+          "title": "Settings",
+          "path": "/technical/settings"
+        }
+        
+      
       ]
     }
   ]
