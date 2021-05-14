@@ -2,11 +2,10 @@ export default function HomePage() {
   return (
     <div className='mx-auto max-w-md'>
       <div className='text-center mt-32 text-3xl font-bold'>
-        Welcome To NextBook!
+        Welcome To MSS International!
       </div>
-      <div className='text-center'>
-        <p>You can use all Next.js features and create your custom app.</p>
-        <p>Or you can use this page to redirect to content.</p>
+      <div className='text-center'>       
+        <p>Use this page to redirect to content.</p>
       </div>
     </div>
   )

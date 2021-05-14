@@ -1,22 +1,20 @@
 ---
-part: NextBook
+part: MSS
 title: Settings & Customization
 ---
 
-## General Settings
+#### General Settings
 
-NextBook is very easy to configure. All you need is change configuration in `config/config.json` file to suit your needs and add your table of contents.
+Change configuration in `config/config.json` file to add your table of contents.
 
-## Advanced Settings
+#### Advanced Settings
 
-There is also an example environment file `.env.local.example` which can be used for advanced usages  like keeping sensitive configration data or keys. To use it, make a local copy with the name `.env.local` and customize content. 
+Use `.env.local.example` to keep sensitive configration data or keys by making a local copy with the name `.env.local` and customize content. 
 
 !> Warning When Deploying
 Keep in mind that the host you are planning to deploy the application must also support environment variables in order to use them. Most of them do.
 
-## Customizations
-
-NextBook is open source and completely customizable. You can modify look & feel using tailsindcss, or completely change behaviour of components.
+#### Customizations
 
 Here are customizable files/folders of the project:
 
