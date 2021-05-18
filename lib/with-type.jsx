@@ -1,46 +1,46 @@
 import React from 'react'
 import cn from 'classnames'
 
-export type Types =
-  | 'secondary'
-  | 'warning'
-  | 'success'
-  | 'default'
-  | 'alert'
-  | 'error'
-  | 'lite'
-  | 'ghost'
-  | 'alert'
-  | 'violet'
+// export type Types =
+//   | 'secondary'
+//   | 'warning'
+//   | 'success'
+//   | 'default'
+//   | 'alert'
+//   | 'error'
+//   | 'lite'
+//   | 'ghost'
+//   | 'alert'
+//   | 'violet'
 
-interface Options {
-  hasFill?: boolean
-  defaultFill?: boolean
-}
+// interface Options {
+//   hasFill?: boolean
+//   defaultFill?: boolean
+// }
 
-export interface WithTypeProps {
-  className?: string
-  type?: Types
-  fill?: boolean
-  children?: React.ReactNode
-}
+// export interface WithTypeProps {
+//   className?: string
+//   type?: Types
+//   fill?: boolean
+//   children?: React.ReactNode
+// }
 
-interface ForwardedRefProps {
-  forwardedRef?: React.Ref<HTMLElement>
-}
+// interface ForwardedRefProps {
+//   forwardedRef?: React.Ref<HTMLElement>
+// }
 
-const getCn = (type?: Types, fill?: boolean) => {
+const getCn = (type, fill) => {
   if (!type) return null
   return ['geist-themed', `geist-${type}`, fill ? `geist-${type}-fill` : null]
 }
 
-const withType = <P extends WithTypeProps>(
-  Component: React.ComponentType<P>,
-  opts: Options = {}
+const withType = (
+  Component,
+  opts = {}
 ) => {
   const { defaultFill, hasFill } = opts
 
-  const Comp: React.ComponentType<P & ForwardedRefProps> = ({
+  const Comp = ({
     className,
     forwardedRef,
     ...props
@@ -58,15 +58,15 @@ const withType = <P extends WithTypeProps>(
     const classNames = cn(getCn(type, fill), className)
 
     return (
-      <Component className={classNames} {...(props as P)} ref={forwardedRef} />
+      <Component className={classNames} {...(props )} ref={forwardedRef} />
     )
   }
 
-  const forwardRef: React.ComponentType<P> = (
-    props: P,
-    ref: React.Ref<HTMLElement>
+  const forwardRef = (
+    props,
+    ref
   ) => {
-    return <Comp {...(props as P)} forwardedRef={ref} />
+    return <Comp {...(props )} forwardedRef={ref} />
   }
 
   // Name for React DevTools

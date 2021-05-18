@@ -1,23 +1,23 @@
 import React, { memo, useMemo, useContext, CSSProperties } from 'react'
 import PropTypes from 'prop-types'
 
-interface Options {
-  color?: string
-  secondary?: string
-  size?: string
-  fill?: string
-  viewBox?: string
-}
+// interface Options {
+//   color?: string
+//   secondary?: string
+//   size?: string
+//   fill?: string
+//   viewBox?: string
+// }
 
-interface IconProps {
-  size?: number
-  color?: string
-  secondary?: string
-  weight?: 'normal' | 'bold' | 'light'
-  fill?: boolean
-  align?: 'top' | 'bottom' | 'middle'
-  style?: CSSProperties
-}
+// interface IconProps {
+//   size?: number
+//   color?: string
+//   secondary?: string
+//   weight?: 'normal' | 'bold' | 'light'
+//   fill?: boolean
+//   align?: 'top' | 'bottom' | 'middle'
+//   style?: CSSProperties
+// }
 
 export const IconSizeContext = React.createContext<number | null>(null)
 export const useIconSize = () => useContext(IconSizeContext)
@@ -27,7 +27,7 @@ IconSizeContext.displayName = 'IconSizeContext'
 const cap = 'round'
 const join = 'round'
 
-const withIcon = (icon: string, iconFill?: boolean, opts: Options = {}) => {
+const withIcon = (icon, iconFill, opts = {}) => {
   const {
     color: defaultColor,
     secondary: defaultSecondary,
@@ -36,7 +36,7 @@ const withIcon = (icon: string, iconFill?: boolean, opts: Options = {}) => {
     viewBox
   } = opts
 
-  const Icon = (props: IconProps) => {
+  const Icon = (props) => {
     const contextSize = useIconSize()
 
     const {
@@ -88,8 +88,8 @@ const withIcon = (icon: string, iconFill?: boolean, opts: Options = {}) => {
           style={{
             ...restProps.style,
             color,
-            ['--geist-fill' as string]: 'currentColor',
-            ['--geist-stroke' as string]: secondary,
+            ['--geist-fill']: 'currentColor',
+            ['--geist-stroke']: secondary,
             verticalAlign: verticalAlign || undefined
           }}
           dangerouslySetInnerHTML={{
@@ -132,7 +132,7 @@ const withIcon = (icon: string, iconFill?: boolean, opts: Options = {}) => {
   }
 
   const memoIcon = memo(Icon)
-  ;(memoIcon as any).hasFill = !!iconFill
+  ;(memoIcon).hasFill = !!iconFill
 
   return memoIcon
 }

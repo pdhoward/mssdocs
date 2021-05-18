@@ -4,7 +4,7 @@ import { withRouter } from 'next/router'
 import { MDXProvider } from '@mdx-js/tag'
 
 import DataContext from '~/lib/data-context'
-import Head from '~/components/layout/head'
+//import Head from '~/components/layout/head'
 import Heading from '~/components/text/linked-heading'
 import Content from '~/components/layout/content'
 import ContentFooter from '~/components/layout/content-footer'
@@ -15,7 +15,7 @@ import data from '~/lib/data/docs'
 import { FooterFeedback } from '~/components/feedback-input'
 //import Footer from '~/components/footer'
 import Sidebar from '~/components/layout/sidebar'
-import DocsNavbarDesktop from '~/components/layout/navbar/desktop'
+//import DocsNavbarDesktop from '~/components/layout/navbar/desktop'
 import Main from '~/components/layout/main'
 import { PRODUCT_NAME, ORG_NAME } from '~/lib/constants'
 
@@ -104,23 +104,16 @@ function Doc({
       }}
     >
       <>
-        <Head
-          titlePrefix=""
-          titleSuffix={` - ${ORG_NAME} Documentation`}
-          title={`${meta.title}`}
-          description={meta.description}
-          image={meta.image}
-          lastEdited={meta.lastEdited}
-        ></Head>
+        
 
         <Main>
           <NonAmpOnly>
             <Sidebar active={navigationActive}>
-              <DocsNavbarDesktop
+              {/*<DocsNavbarDesktop
                 handleIndexClick={handleIndexClick}
                 data={data}
                 url={router}
-              />
+              /> */}
             </Sidebar>
           </NonAmpOnly>
 
