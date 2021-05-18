@@ -3,16 +3,16 @@ import cn from 'classnames'
 
 import styles from './label.module.css'
 
-export interface LabelProps {
-  value: React.ReactNode
-  children?: React.ReactNode
-  withInput?: boolean
-  id?: string
-  elId?: string
-  style?: CSSProperties
-}
+// export interface LabelProps {
+//   value: React.ReactNode
+//   children?: React.ReactNode
+//   withInput?: boolean
+//   id?: string
+//   elId?: string
+//   style?: CSSProperties
+// }
 
-const Label: React.FC<LabelProps> = ({
+const Label = ({
   value,
   withInput,
   id,
