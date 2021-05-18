@@ -5,16 +5,16 @@ import Text from '~/components/text'
 import styles from './note.module.css'
 import useType, { Types } from '~/lib/use-type'
 
-interface NoteProps {
-  label?: string | false
-  small?: boolean
-  center?: boolean
-  type?: Types
-  fill?: boolean
-  className?: string
-}
+// interface NoteProps {
+//   label?: string | false
+//   small?: boolean
+//   center?: boolean
+//   type?: Types
+//   fill?: boolean
+//   className?: string
+// }
 
-const Note: React.FC<NoteProps> = ({
+const Note = ({
   children,
   className,
   type,

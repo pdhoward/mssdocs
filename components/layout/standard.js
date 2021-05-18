@@ -3,7 +3,7 @@ import { useAmp } from 'next/amp'
 import { withRouter } from 'next/router'
 import { MDXProvider } from '@mdx-js/tag'
 
-import Head from '~/components/layout/head'
+//import Head from '~/components/layout/head'
 import Main from '~/components/layout/main'
 import Heading from '~/components/text/linked-heading'
 import Content from '~/components/layout/content'
@@ -41,18 +41,7 @@ class withStandard extends React.Component {
     return (
       <MDXProvider components={components}>
         <>
-          <Head
-            titlePrefix=""
-            titleSuffix={` - ${ORG_NAME} Documentation`}
-            title={`${meta.title}`}
-            description={meta.description}
-            image={meta.image}
-            lastEdited={meta.lastEdited}
-          >
-            {meta.editUrl.includes('/docs/error/') && (
-              <meta name="robots" content="noindex" />
-            )}
-          </Head>
+         
 
           <Main>
             <Content center small>

@@ -1,5 +1,5 @@
 import React from 'react'
-import Head from '~/components/layout/head'
+//import Head from '~/components/layout/head'
 import Content from '~/components/layout/content'
 import Text, { H1, H4 } from '~/components/text'
 import { LinkList } from '~/components/list'
@@ -10,12 +10,7 @@ import Footer from '~/components/footer'
 function ErrorPage() {
   return (
     <>
-      <Head
-        titlePrefix=""
-        titleSuffix={` - ${ORG_NAME} Documentation`}
-        title="Page Not Found"
-        description="The page that has been requested was not found."
-      />
+     
       <Content center small>
         <div className="description">
           <svg

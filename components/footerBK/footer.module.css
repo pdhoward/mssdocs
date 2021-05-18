@@ -1,0 +1,103 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--geist-gap) 0 var(--geist-gap);
+  width: var(--geist-page-width-with-margin);
+  max-width: 100%;
+  margin: auto;
+}
+
+.logotype {
+  display: flex;
+  text-align: center;
+  padding-top: var(--geist-gap);
+  width: var(--geist-page-width-with-margin);
+  max-width: 100%;
+  margin: auto;
+}
+
+.social a {
+  color: var(--accents-5);
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.social a:hover {
+  color: var(--geist-foreground);
+}
+
+.copyright {
+  color: var(--accents-5);
+  font-size: 14px;
+}
+
+.status {
+  min-width: 223px;
+  height: var(--geist-form-small-height);
+}
+
+.social {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.social li {
+  display: inline-flex;
+  margin-right: 15px;
+  border-right: 1px solid var(--accents-2);
+  padding-right: 15px;
+}
+
+.social li:last-child {
+  border-right: none;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.social .github {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+}
+
+.social .bird {
+  display: inline-block;
+  padding-top: 1px;
+}
+
+@media screen and (max-width: 960px) {
+  .logotype {
+    justify-content: center;
+  }
+
+  .wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .status {
+    order: 0;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .copyright {
+    order: 2;
+    flex-basis: 100%;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .contact {
+    order: 1;
+    margin-left: 10px;
+  }
+}

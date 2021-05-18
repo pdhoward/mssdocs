@@ -13,7 +13,7 @@ import { H1, H2, H3, H4 } from '~/components/text'
 import HR from '~/components/text/hr'
 import data from '~/lib/data/docs'
 import { FooterFeedback } from '~/components/feedback-input'
-import Footer from '~/components/footer'
+//import Footer from '~/components/footer'
 import Sidebar from '~/components/layout/sidebar'
 import DocsNavbarDesktop from '~/components/layout/navbar/desktop'
 import Main from '~/components/layout/main'
@@ -144,7 +144,7 @@ function Doc({
             />
           </Content>
         </Main>
-        <Footer />
+      {/*  <Footer /> */}
 
         <style jsx>{`
           ul {

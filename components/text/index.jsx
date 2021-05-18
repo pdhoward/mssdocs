@@ -3,54 +3,54 @@ import cn from 'classnames'
 
 import withType, { WithTypeProps } from '~/lib/with-type'
 
-type TextComponents =
-  | 'h1'
-  | 'h2'
-  | 'h3'
-  | 'h4'
-  | 'h5'
-  | 'h6'
-  | 'p'
-  | 'small'
-  | 'span'
-type WrapComponents = 'mark' | 'u' | 's' | 'b' | 'i'
+// type TextComponents =
+//   | 'h1'
+//   | 'h2'
+//   | 'h3'
+//   | 'h4'
+//   | 'h5'
+//   | 'h6'
+//   | 'p'
+//   | 'small'
+//   | 'span'
+// type WrapComponents = 'mark' | 'u' | 's' | 'b' | 'i'
 
-type Components = keyof Pick<JSX.IntrinsicElements, TextComponents>
-type WrapTags = keyof Pick<JSX.IntrinsicElements, WrapComponents>
+// type Components = keyof Pick<JSX.IntrinsicElements, TextComponents>
+// type WrapTags = keyof Pick<JSX.IntrinsicElements, WrapComponents>
 
-type Preset =
-  | 'h1'
-  | 'h2'
-  | 'h3'
-  | 'h4'
-  | 'h5'
-  | 'h6'
-  | 'p'
-  | 'body-1'
-  | 'body-2'
-  | 'small'
-  | 'span'
-type Weight = 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900
+// type Preset =
+//   | 'h1'
+//   | 'h2'
+//   | 'h3'
+//   | 'h4'
+//   | 'h5'
+//   | 'h6'
+//   | 'p'
+//   | 'body-1'
+//   | 'body-2'
+//   | 'small'
+//   | 'span'
+// type Weight = 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900
 
 // Conditionally wrap a React element with another
-const wrap = (needed = false, children: React.ReactNode, tag: WrapTags) => {
+const wrap = (needed = false, children, tag) => {
   if (!needed) return children
 
   return React.createElement(tag, {}, children)
 }
 
-interface Modifiers {
-  mark?: boolean
-  underline?: boolean
-  strike?: boolean
-  bold?: boolean
-  italic?: boolean
-}
+// interface Modifiers {
+//   mark?: boolean
+//   underline?: boolean
+//   strike?: boolean
+//   bold?: boolean
+//   italic?: boolean
+// }
 
 // Wrap the text in modifier elements like bold and italics
 const wrapModifiers = (
-  component: React.ReactNode,
-  { mark, underline, strike, bold, italic }: Modifiers
+  component,
+  { mark, underline, strike, bold, italic }
 ) => {
   let result = component
 
@@ -63,23 +63,23 @@ const wrapModifiers = (
   return result
 }
 
-interface NestedProps {
-  preset?: Preset
-  code?: boolean
-  Component?: Components
-  type?: string
-  className?: string
-  noMargin?: boolean
-  weight?: Weight
-  uppercase?: boolean
-  capitalize?: boolean
-  center?: boolean
-  maxWidth?: string
-  style?: CSSProperties
-}
+// interface NestedProps {
+//   preset?: Preset
+//   code?: boolean
+//   Component?: Components
+//   type?: string
+//   className?: string
+//   noMargin?: boolean
+//   weight?: Weight
+//   uppercase?: boolean
+//   capitalize?: boolean
+//   center?: boolean
+//   maxWidth?: string
+//   style?: CSSProperties
+// }
 
-const getComponent = (defaultElement: Components) => {
-  const C: React.FC<NestedProps> = ({
+const getComponent = (defaultElement) => {
+  const C = ({
     type,
     noMargin,
     weight,
@@ -140,29 +140,29 @@ export const Span = getComponent('span')
 
 const components = [H1, H2, H3, H4, H5, H6, P, Small, Span]
 
-interface TextProps extends WithTypeProps {
-  Component?: Components
-  h1?: boolean
-  h2?: boolean
-  h3?: boolean
-  h4?: boolean
-  h5?: boolean
-  h6?: boolean
-  p?: boolean
-  small?: boolean
-  span?: boolean
-  mark?: boolean
-  underline?: boolean
-  strike?: boolean
-  bold?: boolean
-  italic?: boolean
-  uppercase?: boolean
-  capitalize?: boolean
-  weight?: Weight
-  style?: React.CSSProperties
-}
+// interface TextProps extends WithTypeProps {
+//   Component?: Components
+//   h1?: boolean
+//   h2?: boolean
+//   h3?: boolean
+//   h4?: boolean
+//   h5?: boolean
+//   h6?: boolean
+//   p?: boolean
+//   small?: boolean
+//   span?: boolean
+//   mark?: boolean
+//   underline?: boolean
+//   strike?: boolean
+//   bold?: boolean
+//   italic?: boolean
+//   uppercase?: boolean
+//   capitalize?: boolean
+//   weight?: Weight
+//   style?: React.CSSProperties
+// }
 
-const Text: React.FC<TextProps & NestedProps> = ({
+const Text = ({
   // HTML element
   Component,
   // styling
