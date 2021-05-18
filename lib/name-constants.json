@@ -1,0 +1,16 @@
+{
+  "cdnName": "Vercel Edge Network",
+  "cdnShortName": "Edge Network",
+  "productName": "Vercel",
+  "productDomain": "vercel.com",
+  "deploymentSuffix": "vercel.app",
+  "orgName": "Vercel",
+  "productShortName": "Vercel",
+  "productV1Name": "ZEIT Now 1.0",
+  "orgV1Name": "Vercel",
+  "productShortV1Name": "Now",
+  "cliV1Name": "Vercel CLI",
+  "githubAppName": "Vercel",
+  "gitlabAppName": "Vercel",
+  "bitbucketAppName": "Vercel"
+}

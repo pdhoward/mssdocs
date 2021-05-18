@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "paths": {
+      "@/components/*": ["components/*"]
+    },
     "jsx": "react"
   },
   "exclude": ["node_modules", ".next"]
